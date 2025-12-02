@@ -1,0 +1,20 @@
+1. Utilizați pentru texturare imagini cu transparență și fără. Ce observați?
+-stiim ca texturile pot retine informatii precum canale de transparenta, se pot retine pana la 4 elemente(R, G, B, A), A fiind alpha =-ul , transparenta
+-in OpenGL , ca transparenta sa functioneze correct, trebuie activat si configurat Blending ul.
+- imaginile cu transparenta, ce contin canalul Alpha, permite vizualizarea fundalului prin anumite zone ale texturii, dand iluzie de contururi neregulate pe suprafata in cauza, dreptunghiulara.
+
+
+2. Ce formate de imagine pot fi aplicate în procesul de texturare în
+OpenGL?
+- OpenGL lucreaza normal cu tablouri de pixeli, dar foloseste si incarcarea pe formate standard cum ar fi BMP, JPEG, PNG, etc.
+
+
+3. Specificați ce se întâmplă atunci când se modifică culoarea (prin
+manipularea canalelor RGB) obiectului texturat.
+- in Modulation, culoarea obiectului e ca un filtru peste textura.Valorile pixelillor din textura se inmultesc cu valorie culorii obiectului.
+- depinde de functia de calcul a culorii, utilizata. Pot fi moduri precum Decal / Replace mode unde culoarea teturii e aplicata direct si se ignora culoarea obiectului,Blended Mode, unde o culoare e amestecata cu textura, si modulatia, unde culoarea e scalata sau combinate cu textura(daca se schimba culoarea obiectului se va nuanta si textura)
+
+
+4. Ce deosebiri există între scena ce utilizează obiecte texturate în modul
+iluminare activat, respectiv dezactivat?
+-activand lumina, ar trebui sa perimta ca textura sa reactioneze la sursele de lumina cum ar fi umbrele, intensitatea , sclipiri, zone mai intunecate( ofera aspect 3d corpului), in timp ce dezactivarea reda textura la luminiozitate constanta, indiferent de pozitia, sau unghiul camerei sau obiectului, si da astfel efect si aspect , volum 2D.
